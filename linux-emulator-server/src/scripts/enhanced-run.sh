@@ -4,13 +4,13 @@ set -euo pipefail
 # Enhanced QEMU runner for iOS images with profiles, snapshots, and monitoring
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LOG_DIR="/var/log/silicon-emulator"
-VM_DIR="/var/lib/silicon-emulator/vms"
+LOG_DIR="/var/log/qemu-ios-emulator"
+VM_DIR="/var/lib/qemu-ios-emulator/vms"
 mkdir -p "$LOG_DIR" "$VM_DIR"
 
 usage(){
   cat <<EOF
-Usage: $0 --name NAME [--profile iphone14|iphone15|ipadpro] [--memory 4G] [--cpus 4] [--disk path] [--vnc :1] [--headless]
+Usage: $0 --name NAME [--profile iphone14-pro|iphone14|iphone15|ipadpro] [--memory 6G] [--cpus 6] [--disk path] [--vnc :1] [--headless]
 Controls snapshots: --snapshot save|load --snapshot-name NAME
 EOF
   exit 1
@@ -23,9 +23,9 @@ require(){ command -v "$1" >/dev/null 2>&1 || { echo "missing $1"; exit 2; } }
 require qemu-system-aarch64
 
 NAME=""
-PROFILE="iphone14"
-MEM="4G"
-CPUS=4
+PROFILE="iphone14-pro"
+MEM="6G"
+CPUS=6
 DISK=""
 VNC_DISPLAY="-vnc :0"
 HEADLESS=0
@@ -81,9 +81,9 @@ fi
 
 # profile mapping
 case "$PROFILE" in
-  iphone14)
+  iphone14|iphone14-pro)
     MACHINE_ARGS=( -machine virt,highmem=on )
-    CPU_MODEL="cortex-a72"
+    CPU_MODEL="cortex-a78"
     ;;
   iphone15)
     MACHINE_ARGS=( -machine virt,highmem=on )

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-LOGFILE="/var/log/silicon-emulator-setup.log"
+LOGFILE="/var/log/qemu-ios-emulator-setup.log"
 mkdir -p "$(dirname "$LOGFILE")"
 
 log(){

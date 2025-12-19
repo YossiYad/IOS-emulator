@@ -30,7 +30,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Create directories
-RUN mkdir -p /var/lib/silicon-emulator /usr/share/qemu/edk2-aarch64 /usr/share/qemu/ios-firmware
+RUN mkdir -p /var/lib/qemu-ios-emulator /usr/share/qemu/edk2-aarch64 /usr/share/qemu/ios-firmware
 
 # Set the working directory
 WORKDIR /app

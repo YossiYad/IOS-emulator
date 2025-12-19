@@ -6,7 +6,7 @@ set -euo pipefail
 # signed boot chain which cannot be provided here.
 
 FIRMWARE_DIR="/usr/share/qemu/edk2-aarch64"
-DEFAULT_DISK="/var/lib/silicon-emulator/macos-arm64.qcow2"
+DEFAULT_DISK="/var/lib/qemu-ios-emulator/macos-arm64.qcow2"
 
 DISK_IMAGE="${1:-$DEFAULT_DISK}"
 MEMORY="${2:-8G}"

@@ -4,11 +4,11 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile.qemu
-    container_name: silicon-manager
+    container_name: qemu-manager
     volumes:
       - ./linux-emulator-server:/workspaces/linux-emulator-server:rw
       - ./images:/workspaces/images:rw
-      - /var/log/silicon-emulator:/var/log/silicon-emulator:rw
+      - /var/log/qemu-ios-emulator:/var/log/qemu-ios-emulator:rw
     ports:
       - "8080:8080"
     cap_add:

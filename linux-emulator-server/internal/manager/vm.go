@@ -38,8 +38,8 @@ func (m *Manager) StartVM(ctx context.Context, name string, args []string) (*VMS
 	cmdArgs := append([]string{runner, "--name", name}, args...)
 	cmd := exec.CommandContext(ctx, "/bin/bash", cmdArgs...)
 	// ensure logs directory exists
-	_ = os.MkdirAll("/var/log/silicon-emulator", 0o755)
-	logFilePath := "/var/log/silicon-emulator/" + name + ".log"
+	_ = os.MkdirAll("/var/log/qemu-ios-emulator", 0o755)
+	logFilePath := "/var/log/qemu-ios-emulator/" + name + ".log"
 	f, err := os.OpenFile(logFilePath, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0o644)
 	if err == nil {
 		cmd.Stdout = f

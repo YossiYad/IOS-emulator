@@ -35,12 +35,12 @@ services:
     
     volumes:
       # Persistent storage for disk images and firmware
-      - qemu-storage:/var/lib/silicon-emulator
+      - qemu-storage:/var/lib/qemu-ios-emulator
       - qemu-firmware:/usr/share/qemu/edk2-aarch64
       - qemu-ios:/usr/share/qemu/ios-firmware
       
       # Configuration
-      - ./configs:/etc/silicon-emulator
+      - ./configs:/etc/qemu-ios-emulator
       - ./src/scripts:/app/scripts:ro
     
     healthcheck:

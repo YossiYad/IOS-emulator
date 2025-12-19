@@ -1,4 +1,4 @@
-module silicon-emulator
+module qemu-ios-emulator
 
 go 1.21
 

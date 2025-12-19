@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	ide "silicon-emulator/internal/ide"
-	manager "silicon-emulator/internal/manager"
+	ide "qemu-ios-emulator/internal/ide"
+	manager "qemu-ios-emulator/internal/manager"
 
 	"github.com/gorilla/mux"
 )

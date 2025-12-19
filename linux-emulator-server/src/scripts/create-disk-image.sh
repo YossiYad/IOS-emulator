@@ -10,7 +10,7 @@ echo "================================================"
 # Default values
 SIZE=${1:-64G}
 FORMAT=${2:-qcow2}
-OUTPUT_DIR="/var/lib/silicon-emulator"
+OUTPUT_DIR="/var/lib/qemu-ios-emulator"
 IMAGE_NAME="macos-arm64.${FORMAT}"
 
 echo "Creating disk image with following parameters:"

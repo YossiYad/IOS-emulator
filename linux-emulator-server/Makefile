@@ -6,9 +6,9 @@ VERSION := 2.0.0
 BUILD_DIR := build
 SRC_DIR := src
 BIN_DIR := bin
-CONFIG_DIR := /etc/silicon-emulator
-VAR_DIR := /var/lib/silicon-emulator
-LOG_DIR := /var/log/silicon-emulator
+CONFIG_DIR := /etc/qemu-ios-emulator
+VAR_DIR := /var/lib/qemu-ios-emulator
+LOG_DIR := /var/log/qemu-ios-emulator
 
 # Go build settings
 GO := go
@@ -102,7 +102,7 @@ ios-run-ipad: ## Run iPad Pro emulator
 
 ios-info: ## Show iOS emulation configuration
 	@echo "$(GREEN)iOS Emulation Configuration:$(NC)"
-	@[ -f /etc/silicon-emulator/ios-devices.json ] && cat /etc/silicon-emulator/ios-devices.json || echo "Not configured"
+	@[ -f /etc/qemu-ios-emulator/ios-devices.json ] && cat /etc/qemu-ios-emulator/ios-devices.json || echo "Not configured"
 
 ## Installation
 

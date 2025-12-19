@@ -23,7 +23,7 @@ func (m *Manager) LogsWSHandler(w http.ResponseWriter, r *http.Request) {
 		conn.WriteMessage(websocket.TextMessage, []byte("name query param required"))
 		return
 	}
-	filePath := "/var/log/silicon-emulator/" + name + ".log"
+	filePath := "/var/log/qemu-ios-emulator/" + name + ".log"
 
 	// open file and stream new data
 	var offset int64 = 0

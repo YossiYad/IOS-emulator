@@ -1,5 +1,5 @@
 [Unit]
-Description=Silicon iOS Emulator Manager and Headless VM
+Description=QEMU iOS Emulator Manager and Headless VM
 After=network.target
 
 [Service]

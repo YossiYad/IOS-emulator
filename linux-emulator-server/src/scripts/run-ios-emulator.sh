@@ -4,9 +4,9 @@
 
 set -e
 
-CONFIG_DIR="/etc/silicon-emulator"
+CONFIG_DIR="/etc/qemu-ios-emulator"
 FIRMWARE_DIR="/usr/share/qemu/ios-firmware"
-IMAGE_DIR="/var/lib/silicon-emulator/ios-images"
+IMAGE_DIR="/var/lib/qemu-ios-emulator/ios-images"
 
 # Default values
 DEVICE="${1:-iPhone14}"

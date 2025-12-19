@@ -8,9 +8,9 @@ echo "================================================"
 echo "iOS QEMU Configuration Setup"
 echo "================================================"
 
-IMAGE_DIR="/var/lib/silicon-emulator/ios-images"
+IMAGE_DIR="/var/lib/qemu-ios-emulator/ios-images"
 FIRMWARE_DIR="/usr/share/qemu/ios-firmware"
-CONFIG_DIR="/etc/silicon-emulator"
+CONFIG_DIR="/etc/qemu-ios-emulator"
 
 sudo mkdir -p "$CONFIG_DIR"
 

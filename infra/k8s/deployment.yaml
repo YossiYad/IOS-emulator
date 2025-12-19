@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: silicon-emulator-manager
+  name: qemu-ios-emulator-manager
   labels:
-    app: silicon-emulator
+    app: qemu-ios-emulator
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: silicon-emulator
+      app: qemu-ios-emulator
   template:
     metadata:
       labels:
@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
         - name: manager
-          image: silicon-emulator/manager:latest
+          image: qemu-ios-emulator/manager:latest
           ports:
             - containerPort: 8080
           volumeMounts:
             - name: images
               mountPath: /workspaces/images
             - name: logs
-              mountPath: /var/log/silicon-emulator
+              mountPath: /var/log/qemu-ios-emulator
       volumes:
         - name: images
           emptyDir: {}
