@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: silicon-emulator
+        app: qemu-ios-emulator
     spec:
       containers:
         - name: manager

@@ -34,7 +34,7 @@ func (m *Manager) StartVM(ctx context.Context, name string, args []string) (*VMS
 	}
 
 	// run the runner script
-	runner := filepath.Join("/workspaces/silicon-M1-Apple-emulator/linux-emulator-server/src/scripts/enhanced-run.sh")
+	runner := filepath.Join("/workspaces/qemu-ios-emulator/linux-emulator-server/src/scripts/enhanced-run.sh")
 	cmdArgs := append([]string{runner, "--name", name}, args...)
 	cmd := exec.CommandContext(ctx, "/bin/bash", cmdArgs...)
 	// ensure logs directory exists

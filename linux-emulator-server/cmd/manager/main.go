@@ -32,7 +32,7 @@ func main() {
 	r.HandleFunc("/api/v1/ide/build", func(w http.ResponseWriter, r *http.Request) { ide.BuildHandler(w, r) }).Methods("POST")
 
 	// Serve the static web UI (if built)
-	staticDir := "/workspaces/silicon-M1-Apple-emulator/linux-emulator-server/src/ui/web/build"
+	staticDir := "/workspaces/qemu-ios-emulator/linux-emulator-server/src/ui/web/build"
 	if _, err := os.Stat(staticDir); err == nil {
 		r.PathPrefix("/").Handler(http.FileServer(http.Dir(staticDir)))
 	}

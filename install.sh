@@ -66,8 +66,8 @@ After=network.target
 [Service]
 Type=simple
 User=emulator_user
-WorkingDirectory=/workspaces/silicon-M1-Apple-emulator/linux-emulator-server
-ExecStart=/workspaces/silicon-M1-Apple-emulator/linux-emulator-server/cmd/manager/manager
+WorkingDirectory=/workspaces/qemu-ios-emulator/linux-emulator-server
+ExecStart=/workspaces/qemu-ios-emulator/linux-emulator-server/cmd/manager/manager
 Restart=on-failure
 RestartSec=5
 
@@ -88,7 +88,7 @@ After=network.target
 [Service]
 Type=simple
 User=emulator_user
-WorkingDirectory=/workspaces/silicon-M1-Apple-emulator/linux-emulator-server/src/ui/web
+WorkingDirectory=/workspaces/qemu-ios-emulator/linux-emulator-server/src/ui/web
 ExecStart=/usr/bin/env npx serve -s build -l 8080
 Restart=on-failure
 RestartSec=5

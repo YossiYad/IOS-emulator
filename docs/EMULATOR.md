@@ -1,4 +1,4 @@
-# Silicon M1 iOS Emulator — Enhanced Setup
+# QEMU iOS Emulator — Enhanced Setup
 
 This document describes the enhanced setup, run scripts, manager API, Docker and Kubernetes manifests added to the repository.
 
@@ -51,6 +51,6 @@ kubectl apply -f infra/k8s/hpa.yaml
 ```
 
 Notes & security:
-- Logs and VM images are stored under `/var/log/silicon-emulator` and `/var/lib/silicon-emulator` by default — ensure proper permissions and backups.
+- Logs and VM images are stored under `/var/log/qemu-ios-emulator` and `/var/lib/qemu-ios-emulator` by default — ensure proper permissions and backups.
 - The manager runs system commands and spawns QEMU processes; run it with limited privileges or in containers.
 - For production, use non-root users, secure websockets, and put the manager behind an authenticated API gateway.
